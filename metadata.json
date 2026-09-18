@@ -1,0 +1,6 @@
+{
+  "name": "臺灣記憶之旅",
+  "description": "專為長者設計的臺灣文化記憶問答，由阿福、小花、小勇原創角色溫暖陪伴，提供大字體、語音朗讀與全正面鼓勵反饋。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

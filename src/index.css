@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Gentle animations for seniors - no fast flicker */
+  @keyframes gentleFall {
+    0% {
+      transform: translateY(-20px) rotate(0deg);
+      opacity: 0;
+    }
+    15% {
+      opacity: 0.95;
+    }
+    85% {
+      opacity: 0.9;
+    }
+    100% {
+      transform: translateY(105vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes softFireworkBurst {
+    0% {
+      width: 8px;
+      height: 8px;
+      opacity: 0.9;
+      transform: scale(0.5);
+    }
+    60% {
+      width: 140px;
+      height: 140px;
+      opacity: 0.6;
+      transform: scale(1);
+    }
+    100% {
+      width: 180px;
+      height: 180px;
+      opacity: 0;
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes softSparkle {
+    0% {
+      opacity: 0;
+      transform: rotate(var(--tw-rotate, 0deg)) translate(10px) scale(0.6);
+    }
+    40% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(var(--tw-rotate, 0deg)) translate(65px) scale(0.3);
+    }
+  }
+
+  @keyframes bounceSlight {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .animate-bounce-slight {
+    animation: bounceSlight 3s ease-in-out infinite;
+  }
+}
+
+body {
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC', system-ui, -apple-system, sans-serif;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
